@@ -7,6 +7,7 @@ let results = document.getElementById("res")
 let tombol = document.getElementById("gamau")
 let currentIndex = 0;
 let score = 0;
+let playGame = document.getElementById("start")
 let answered = false;
 let questionContainer = document.getElementById("questcontainer")
 let tombolAkhir = document.getElementById("backmenu")
@@ -26,12 +27,6 @@ const WrongSFX = new Audio("wrong.mp3")
 WrongSFX.volume = 0.3
 const CorrectSFX = new Audio("correct.mp3")
 WrongSFX.volume = 0.3
-
-window.addEventListener("DOMContentLoaded", () => {
-    bgMusic.play().catch((err) => {
-        console.log("Autoplay ditolak browser:", err);
-    });
-});
 
 let cewe_gua = [
     {
@@ -105,6 +100,8 @@ const pindahButton = () => {
 
 const startGame = () =>{
     questionContainer.classList.remove("hidden")
+    bgMusic.play()
+    playGame.classList.add("hidden")
 }
 
 const backToForm = () => {
