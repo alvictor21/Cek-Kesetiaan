@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ec4899">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lelogin</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-black flex justify-center">
+    <div class="relative bg-[url('bgheart.png')] bg-cover bg-center flex flex-col bg-pink-300 h-screen w-full max-w-[430px] min-h-screen justify-center items-center">
+        <div class="absolute inset-0 bg-pink-500/50"></div>
+        <div id="formUtama" class="relative z-10 flex flex-col items-center justify-between h-135 w-85 rounded-xl shadow-xl bg-pink-700 pb-5 pt-5">
+            <h4 class="mt-8 font-sans text-xl text-white font-bold">Login Ke Hati Aku😽😋</h4>
+            <h4 class="mt-8 font-sans text-xl text-white font-bold" id="res"></h4>
+
+            <div class="flex flex-col gap-5"><!--form input-->
+                <div class="flex flex-col gap-2"> 
+                    <label for="" class="font-sans text-white font-medium text-md">Masukin Nama Cewenya Pictor</label>
+                    <input id="nama" type="text" name=""  class="w-75 pt-3 pb-3 pl-5 pr-5 text-xs rounded-md bg-white">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <label for="" class="font-sans text-white font-medium text-md mb-0">Masukin Password Hatinya Pictor</label>
+                    <input type="password" name="" id="password" class="w-75 pt-3 pb-3 pl-5 pr-5 mt-0 text-xs rounded-md bg-white">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2"><!--remember me-->
+                <div class="flex flex-row gap-1 w-70 ">
+                    <input type="checkbox" name="\" id="cb1" class="bg-white border-0">
+                    <p class="text-white text-xs font-sans font-normal">Selalu Inget Aku? (aishh gausah dicentang <br> sayangg, uda jelas aku inget kamu terus dong😽😽)</p>
+                </div>
+                <div class="flex flex-row gap-1 w-70 ">
+                    <input type="checkbox" name="\" id="cb2" class="bg-white border-0">
+                    <p class="text-white text-xs font-sans font-normal">Lupa Password? (ishh parah sii kalo sampe lupa🥺😖)</p>
+                </div>
+            </div>
+
+            <button 
+            onclick="handleLogin()"
+            class="w-70 text-white font-bold text-md rounded-md hover:bg-pink-600 active:bg-pink-100 pt-3 pb-3 pr-8 pl-8 bg-pink-500">Okehh Masukk</button>
+            <p class="text-white text-xs underline hover:text-blue-300 font-normal">Belum Jadi Cewenya Pictor? Daftar Dulu Gih😋😋</p>
+        </div>
+
+        <!--Jika Login Gagal-->
+        
+        <div class="hidden fixed inset-0 bg-black/50 flex items-center justify-center" id="gagal">
+            <div class="z-10 w-70 h-90 flex flex-col items-center gap-3">
+                <img src="salah.png" alt="">   
+                <button
+                onclick="backToForm()"
+                class="text-white text-md rounded-md hover:bg-pink-600 active:bg-pink-100 pt-1 pb-1 pr-3 pl-3 bg-pink-500">
+                 >   Coba Lagi
+                </button>
+            </div>
+        </div>
+       
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

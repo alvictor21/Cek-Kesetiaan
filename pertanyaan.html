@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-black flex justify-center">
+    
+    <div class="relative bg-[url('bgheart.png')] bg-cover bg-center flex flex-col h-screen w-full max-w-[430px] min-h-screen justify-between items-center overflow-hidden">
+
+        <!-- Overlay Pink -->
+        <div class="absolute inset-0 bg-pink-500/50"></div>
+        <div class="realtive z-10 flex flex-col justify-center h-250 gap-6 items-center">
+            <button 
+            onclick="startGame()"
+            class="w-70 text-white font-bold text-md rounded-md hover:bg-pink-600 active:bg-pink-100 pt-3 pb-3 pr-8 pl-8 bg-pink-500">
+                Mulai Sayangg!!
+            </button>
+
+            <!--Mulaiii-->
+            <div id="questcontainer" class="hidden flex flex-col gap-2 w-100 h-140 items-center bg-white rounded-xl shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                <h3 class="font-bold font-sans text-xl bg-amber-700 text-white p-5 rounded-md shadow-md mt-7" id="nomor"></h3>
+                <p class="font-medium text-center text-md mt-12" id="soal"></p>
+                
+                <div class="flex flex-col gap-3 mt-5" id="pilihan-container">
+                    
+                </div>
+
+                <div class="hidden fixed inset-0 flex items-center bg-black justify-center" id="end">
+                    <div class="z-10 w-70 h-90 flex flex-col items-center gap-3">
+                        <p class="font-medium text-center text-white text-md mt-12" id="soal">Selamattt... Kamu Resmi Lulus Tes Kesetiaan Cewenya Pictor, Sehat Sehat Yaa Cantikkk, Akuu Slalu Sayangg Sama Kamuuu, Aku Bakal Slalu Ada Buat kamuu Dikala Kamu Lagi Susah Ato Seneng, Aku Slalu Disamping Kamu, Jangan Ragu Ragu Buat Cerita Yaa Bubb, Akuu Rumah Kedua Kamu Klo Kamu Lagi Diterpa Masalah Dari Berbagai Sisi, Tapi Aku Bakal lindungin Kamu Juga Dari Berbagai sisi, Lovee uuu cantikk😽😽</p>
+                        <button
+                        onclick="backMenu()"
+                        id="backmenu"
+                        class="text-white text-md rounded-md hover:bg-pink-600 active:bg-pink-100 pt-1 pb-1 pr-3 pl-3 bg-pink-500">
+                        >   Coba Lagi
+                        </button>
+                    </div>
+                </div>
+
+                <div class="hidden fixed inset-0 bg-black/50 flex items-center justify-center" id="gagal">
+                    <div class="z-10 w-70 h-90 flex flex-col items-center gap-3">
+                        <img src="salah.png" alt="">   
+                        <button
+                        onclick="backToQuestion()"
+                        class="text-white text-md rounded-md hover:bg-pink-600 active:bg-pink-100 pt-1 pb-1 pr-3 pl-3 bg-pink-500">
+                        >   Coba Lagi
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+</div>
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>

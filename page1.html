@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman 1</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body class="bg-black flex justify-center">
+    
+    <div class="relative bg-[url('bgheart.png')] bg-cover bg-center flex flex-col h-screen w-full max-w-[430px] min-h-screen justify-between items-center overflow-hidden">
+
+    <!-- Overlay Pink -->
+    <div class="absolute inset-0 bg-pink-500/50"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex flex-col items-center gap-5">
+
+        <img src="areyou.png" alt="" srcset="" class="w-90 h-100">
+        <h2 class="font-sans font-extrabold text-xl text-white text-center">
+            Jawab Pertanyaan2 Ini klo Emang Kamu Cewenya Pictor rill no fek fek😽
+        </h2>
+
+        <div class="flex flex-col gap-2">
+
+            <button 
+            onclick="okeSiap()"
+            class="w-70 text-white font-bold text-md rounded-md hover:bg-pink-600 active:bg-pink-100 pt-3 pb-3 pr-8 pl-8 bg-pink-500">
+                OKEEE SIAPP!!!
+            </button>
+
+            <button 
+            id="gamau"
+            onclick="pindahButton()"
+            class="absolute mt-15 w-70 text-white font-bold text-md rounded-md pt-3 pb-3 pr-8 pl-8 bg-gray-700">
+                💀☠️ GAMAUU!!! 💀☠️
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>
