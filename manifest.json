@@ -1,7 +1,7 @@
 {
   "name": "Quiz App Kamu",
   "short_name": "QuizApp",
-  "start_url": "Login.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ec4899",
