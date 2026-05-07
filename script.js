@@ -12,6 +12,12 @@ let questionContainer = document.getElementById("questcontainer")
 let tombolAkhir = document.getElementById("backmenu")
 let kataRomantis = document.getElementById("end")
 
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/service-worker.js")
+        .then(() => console.log("Service Worker aktif"))
+        .catch(err => console.log(err));
+}
+
 const bgMusic = new Audio("musicBG.mp3");
 bgMusic.loop = true;   // ulang terus
 bgMusic.volume = 0.5;  // volume 0.0 - 1.0
